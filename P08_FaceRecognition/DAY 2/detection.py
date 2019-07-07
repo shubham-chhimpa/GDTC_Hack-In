@@ -16,7 +16,7 @@ while True:
         roi_gray = gray[y:y + h, x:x + w]
         roi_color = img[y:y + h, x:x + w]
 
-    cv2.imshow('img', img)
+    cv2.imshow('img', cv2.flip(img,1))
     k = cv2.waitKey(30) & 0xff
     if k == 27:
         break
